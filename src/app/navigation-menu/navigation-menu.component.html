@@ -1,0 +1,40 @@
+<div class="menu">
+  <mat-toolbar class="header">
+    <div class="left-side">
+      <button class="circle-button" (click)="closeDialog()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Navigation Menu</span>
+    </div>
+    <input type="image" src="assets/logo/logo.png" alt="MeWeAll" matTooltip="Go to News Feeds" (click)="closeDialog()">
+    <div class="right-side">
+      <button class="circle-button" (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+  <div class="body">
+    <div class="profile">
+      <input type="image" src="../../assets/profiles/annia/annia-thumbnail.jpg"
+            alt=":)" [routerLink]="['/profile']" (click)="closeDialog()">
+      <div class="name-with-link">
+        <h3>Firstname Lastname</h3>
+        <a [routerLink]="['/profile']" (click)="closeDialog()">
+          <mat-icon>person</mat-icon>
+          <span>Go to My Profile</span>
+        </a>
+      </div>
+    </div>
+    <div class="pages">
+      <button mat-button [routerLink]="['/']" (click)="closeDialog()">
+        <mat-icon>work</mat-icon>
+        Jobs For Me
+      </button>
+      <button mat-button (click)="closeDialog()">
+        <mat-icon>sms</mat-icon>
+        Messages
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

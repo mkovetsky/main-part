@@ -1,0 +1,16 @@
+<!-- main app container -->
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <system-bar></system-bar>
+        <div class="main-container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+
+    <mat-sidenav class="nav-right" mode="over" position="end" [opened]="openRightSidenav" (closed)="openRightSidenav = false">
+        <router-outlet name="sidenav-right"></router-outlet>
+    </mat-sidenav>
+    <mat-sidenav class="nav-left" mode="over" [opened]="openLeftSidenav" (closed)="openLeftSidenav = false">
+        <router-outlet name="sidenav-left"></router-outlet>
+    </mat-sidenav>
+</mat-sidenav-container>

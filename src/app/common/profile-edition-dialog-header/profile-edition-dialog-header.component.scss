@@ -1,0 +1,21 @@
+.header {
+    background-color: rgb(16, 59, 163);
+    color: white;
+    padding: 1rem;
+    height: 4.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left-side {
+        display: flex;
+        flex-direction: row;
+
+        span {
+            margin-left: 1rem;
+            font: bold;
+            align-self: center;
+        }
+    }
+}

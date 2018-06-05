@@ -1,0 +1,40 @@
+<section class="page">
+    <div class="section">
+        <div class="header">
+            <button class="btn-add" mat-button (click)='add()'>
+                <mat-icon>add</mat-icon>
+            </button>
+            <span class="count">{{courses.length}} items</span>
+        </div>
+    </div>
+
+    <div>
+        <ul dnd-sortable-container [sortableData]="courses">
+            <li *ngFor="let course of courses; let i = index">
+
+                <div class="course" fxLayout fxLayoutAlign='end stretch' fxLayoutGap='5px' dnd-sortable [sortableIndex]="i">
+                    <button class="btn-expand" [ngClass]='arrow_style(course.expanded)'  mat-button (click)='expand(i)'>
+                      <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+
+                    <input  fxFlex class="course_title" type="text" [(ngModel)]='course.title' placeholder="Super Power Name...">
+                    <button mat-button dnd-sortable-handle><mat-icon>open_with</mat-icon></button>
+                    <button mat-button (click)="delete(i)"><mat-icon>delete_forever</mat-icon></button>
+                </div>
+
+                <div class="course-content" fxLayout='column' fxLayoutGap='10px'>
+                    <mat-expansion-panel class="expansion-area" [expanded]="course.expanded" hideToggle="true">
+                        <div fxFill fxLayout='column' fxLayoutAlign="start stretch">
+                            <div class="static">Description</div>
+                            <textarea class="value" [(ngModel)]='course["description"]' placeholder="Describe">
+                            </textarea>
+                        </div>
+                    </mat-expansion-panel>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+<!--
+ -->

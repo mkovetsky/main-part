@@ -1,0 +1,55 @@
+<div>
+    <header>
+        <h1>{{title}} Media</h1>
+        <button class="square-btn"><i class="material-icons">add</i></button>
+    </header>
+    <div class="carousel">
+        <div *ngIf="!media || media.length == 0" class="empty-card-content">
+            <i class="material-icons">arrow_upward</i>
+            <p>Click on the (+) at the top to add media</p>
+        </div>
+        <mat-card *ngFor="let mediaInstance of media">
+            <img mat-card-image src="{{mediaInstance.imgUrl}}"
+                class="card-image"
+                alt="Oops, you cannot see me now!">
+            <div class="mat-card-below-img">
+                <mat-card-content>
+                    <h4>
+                        {{mediaInstance.subtitle}}
+                    </h4>
+                    <p>
+                        By: {{mediaInstance.createdBy}}
+                    </p>
+                    <p>
+                        {{mediaInstance.createdAt | date:'longDate' }}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="row-side-by-side-start">
+                        <button class="circle-button">
+                            <mat-icon>visibility</mat-icon>
+                        </button>
+                        <button class="circle-button">
+                            <mat-icon>open_in_new</mat-icon>
+                        </button>
+                    </div>
+                    <div class="row-side-by-side-end">
+                        <button class="square-btn">
+                            <mat-icon>mode_edit</mat-icon>
+                        </button>
+                        <input type="image" class="profile-thumbnail" src="../../assets/profiles/annia/annia-thumbnail.jpg"/>
+                    </div>
+                </mat-card-actions>
+            </div>
+        </mat-card>
+    </div>
+    <footer *ngIf="media && media.length > 1">
+        <button class="circle-button">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <button class="circle-button">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+        <p>{{media.length}} items in total</p>
+    </footer>
+</div>

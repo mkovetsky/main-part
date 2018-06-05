@@ -1,0 +1,31 @@
+
+.left-page-intro {
+    margin: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    background-color: rgb(241, 241, 241);
+}
+
+.left-page {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: space-between;
+    @extend .left-page-intro;
+    padding: 1rem;
+}
+
+.right-page {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    float: right;
+    background-color: whitesmoke;
+    box-shadow: -2px 2px 3px lightgrey;
+    height: 90vh;
+    overflow: auto;
+}

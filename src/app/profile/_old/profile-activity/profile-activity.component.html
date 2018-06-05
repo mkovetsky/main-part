@@ -1,0 +1,32 @@
+<empty-profile-card *ngIf="!activity || !activity.name || activity.name.length === 0"
+  [title]="title"
+  (onEditClicked)="onEditClicked()">
+</empty-profile-card>
+<div class="full-card" *ngIf="activity.name.length > 0">
+  <mat-card>
+    <mat-card-title>
+      <span>{{title}}</span>
+      <square-button matIcon="mode_edit"
+        (click)="onEditClicked(text)"
+        (onTextChange)="updateContent($event)"></square-button>
+    </mat-card-title>
+    <mat-card-content>
+      <div class="header">
+        <h4>{{activity.name}}</h4>
+        <span *ngIf="activity.isOngoing">{{activity.from}} - Present</span>
+        <span *ngIf="!activity.isOngoing">{{activity.from}} - {{activity.to}}</span>
+      </div>
+      <div class="body">
+        {{activity.personalSignificance}}
+      </div>
+      <div class="footer" *ngIf="activity.highlights && activity.highlights.length > 0">
+        <h4>Highlights</h4>
+        <ul>
+          <li *ngFor="let highlight of activity.highlights">
+            {{ highlight }}
+          </li>
+        </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

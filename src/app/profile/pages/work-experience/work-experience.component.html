@@ -1,0 +1,34 @@
+<section class="container">
+  <div class="one-experience" *ngFor='let info of workExperiences; let i=index'>
+    <div class="page-header" fxLayout fxLayoutAlign='space-between start' fxLayoutGap='20px'>
+      <div fxLayout fxLayoutGap='20px' fxLayoutAlign='start center'>
+        <img *ngIf='info.details' src='assets/company.jpeg'>
+        <div *ngIf='info.details'>
+          <div *ngIf='info.details.job'>{{info.details.job}}</div>
+          <p *ngIf='info.details.compony && info.details.position'>
+            {{info.details.compony}}.{{info.details.position}}
+          </p>
+          <p *ngIf='info.details.from.month && info.details.from.year && info.details.to.month && info.details.to.year'>
+            {{info.details.from.month}} {{info.details.from.year}} - {{info.details.to.month}} {{info.details.to.year}}
+          </p>
+          <p *ngIf='info.details.city && info.details.province && info.details.country'>
+            {{info.details.city}}.{{info.details.province}}.{{info.details.country}}
+          </p>
+        </div>
+      </div>
+      <button mat-button (click)="editWorkExperienceDetails(i)"><mat-icon>create</mat-icon></button>
+    </div>
+    <div>
+      <div class="page-header" fxLayout fxLayoutAlign='space-between start'>
+        <p><strong>HIGHLIGHTS</strong></p>
+        <button mat-button (click)="editWorkExperienceHighlights(i)"><mat-icon>create</mat-icon></button>
+      </div>
+      <ol class="page-content" *ngIf='info.highlights'>
+        <li *ngFor="let data of info.highlights">
+          <p>{{data.description}}</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <button mat-button class="add-work-experience" (click)='addExp()'>Add Experience</button>
+</section>

@@ -1,0 +1,17 @@
+<div class="left-page-intro" *ngIf="!title || title.length == 0 || title == 'Introduction'">
+    <basic-intro-media-card>
+    </basic-intro-media-card>
+</div>
+<div class="left-page" *ngIf="title && title != 'Introduction'">
+    <basic-media-card [title]="title" [media]="media">
+    </basic-media-card>
+</div>
+<div class="right-page" (scroll)="onBookScroll($event)">
+    <profile-introduction id="intro"></profile-introduction>
+    <app-activity-details id="activ"></app-activity-details>
+    <app-skills id="skills"></app-skills>
+    <app-work-experience id="jobs"></app-work-experience>
+    <profile-super-power id="powers"></profile-super-power>
+    <app-school-details-highlights id="acade"></app-school-details-highlights>
+    <app-travelling-info id="travels"></app-travelling-info>
+</div>

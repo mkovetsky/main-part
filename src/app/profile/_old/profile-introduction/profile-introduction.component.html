@@ -1,0 +1,22 @@
+<empty-profile-card *ngIf="!text && !videoUrl"
+  [title]="title"
+  (onEditClicked)="onEditClicked()">
+</empty-profile-card>
+<div class="full-card" *ngIf="text || videoUrl">
+  <mat-card>
+    <mat-card-title>
+      <span class="title">{{title}}</span>
+      <square-button matIcon="mode_edit"
+        (click)="onEditClicked(text)"
+        (onTextChange)="updateContent($event)"></square-button>
+    </mat-card-title>
+    <mat-card-content class="clearfix">
+      <iframe *ngIf="videoUrl"
+        [src]='sanitizer.bypassSecurityTrustResourceUrl(videoUrl)'
+        frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <p>{{text}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

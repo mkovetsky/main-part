@@ -1,0 +1,39 @@
+
+mat-card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.empty-card-content {
+    background-color: rgb(232, 235, 238);
+    padding: 1em;
+    border: grey;
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    i {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.centered {
+    padding: 7.5rem 0;
+    text-align: center;
+}
+
+.top-right {
+    text-align: right;
+    padding: 1rem;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,8 @@
+<mat-card *ngIf="message">
+    <mat-card-title>
+        {{message.text}}
+    </mat-card-title>
+    <mat-card-actions>
+        <button mat-raised-button (onclick)="hideAlert()">Sorry, I Got it!</button>
+    </mat-card-actions>
+</mat-card>

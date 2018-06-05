@@ -1,0 +1,40 @@
+
+.full-card {
+    min-height: 25vh;
+}
+
+mat-card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centered {
+    padding: 7.5rem 0;
+    text-align: center;
+}
+
+.top-right {
+    text-align: right;
+    padding: 1rem;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+iframe {
+    float: left;
+    margin-right: 1rem;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+mat-card-content {
+    p {
+        margin: 0;
+    }
+}

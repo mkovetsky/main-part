@@ -1,0 +1,60 @@
+mat-card-footer {
+    background-color: grey;
+    opacity: 0.8;
+}
+
+mat-card {
+    background-image: url('../../../assets/settings/background-empty-profile.jpg');
+    background-size: 100% auto;
+    height: 90vh;
+    display: flex;
+    text-align: center;
+}
+
+.card-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-footer {
+    height: 30%;
+    align-self: flex-end;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name {
+    font-size: 2em;
+    color: white;
+}
+
+.left-side {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    .actions {
+        align-self: flex-end;
+    }    
+
+    .message {
+        margin: 0;
+        color: white;
+        align-self: flex-start;
+        text-align: start;
+    }
+}

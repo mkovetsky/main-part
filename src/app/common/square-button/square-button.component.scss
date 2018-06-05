@@ -1,0 +1,16 @@
+button {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border: solid 0.125rem #333;
+    &:focus {
+        outline: none;
+    }
+    mat-icon {
+        margin: auto;
+    }
+}

@@ -1,0 +1,50 @@
+<profile-edition-dialog-header
+  title="Activities"
+  (onArrowBackClicked)="closeDialog()"
+  (onCheckedClicked)="onCheckedClicked()">
+</profile-edition-dialog-header>
+<form class="form">
+  <div class="side-by-side">
+    <div class="form-group">
+      <label for="name">Activity Name</label>
+      <input type="text" class="form-control" id="name"
+              placeholder="Activity name"
+              [(ngModel)]="activity.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="ongoing">Ongoing?</label>
+      <mat-slide-toggle id="ongoing" [(ngModel)]="activity.isOngoing" name="isOngoing" >
+      </mat-slide-toggle>
+    </div>
+  </div>
+  <div class="side-by-side">
+    <div class="form-group">
+      <label for="from">From</label>
+      <input type="date" class="form-control" id="from"
+              [(ngModel)]="activity.from" name="from" required>
+    </div>
+    <div class="form-group">
+      <label for="to">To</label>
+      <input type="date" class="form-control" id="to" [disabled]="activity.isOngoing"
+              [(ngModel)]="activity.to" name="to" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="personalSignificance">Personal significance to you</label>
+    <textarea id="personalSignificance" placeholder="This is a description"
+              [(ngModel)]="activity.personalSignificance" name="personalSignificance">
+    </textarea>
+  </div>
+
+  <mat-divider>
+  </mat-divider>
+
+  <div class="highlights">
+    <span>Highlights</span>
+    <div>
+      <span>0 Items</span>
+      <square-button matIcon="add"></square-button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,65 @@
+mat-toolbar {
+    padding: 0;
+    position: fixed;
+    height: 4rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    ::ng-deep .mat-input-underline {
+        display: none;
+    }
+}
+
+mat-icon {
+    align-self: center;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.logo {
+    flex: 0 0 auto;
+    border-radius: 2em / 8em;
+    // Make sure it is on top of anything
+    z-index: 15;
+    &:focus {
+        outline: none;
+    }
+}
+
+.full-input {
+    width: 100%;
+}
+
+.centered-icon {
+    margin: 0.5rem;
+}
+
+.profile-thumbnail {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-menu-button {
+    padding: 0.3rem;
+}
+
+.main-menu-btn {
+    border: none;
+}

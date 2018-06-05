@@ -1,0 +1,35 @@
+<mat-card class="card">
+    <mat-card-content class="card-block">
+    </mat-card-content>
+    <mat-card-footer class="card-footer">
+        <div class="left-side name">
+            <span>
+                FIRSTNAME
+            </span>
+            <span>
+                MIDDLENAME
+            </span>
+            <span>
+                LASTNAME
+            </span>
+        </div>
+        <div class="right-side">
+            <span class="message">
+                Oops...No Academic / Professional information avalaible.<br>
+                Further edit your school and work experience to make this section
+                awesome!
+            </span>
+            <div class="actions">
+                <square-button matIcon="photo_camera" [matMenuTriggerFor]="profilePictureMenu"></square-button>
+                <square-button matIcon="edit"></square-button>
+            </div>
+        </div>
+    </mat-card-footer>
+</mat-card>
+
+<mat-menu #profilePictureMenu="matMenu" class="profile-picture-menu">
+    <button mat-menu-item>Upload Photo</button>
+    <button mat-menu-item>Reposition Photo</button>
+    <button mat-menu-item>Edit Thumbnail</button>
+    <button mat-menu-item>Remove Photo</button>
+</mat-menu>

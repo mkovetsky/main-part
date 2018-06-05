@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>
+      <span class="title">{{title}}</span>
+      <square-button matIcon="mode_edit" (click)="editProfileCard()"></square-button>
+    </mat-card-title>
+    <mat-card-content *ngIf="!details || details.length == 0" class="empty-card-content">
+        <i class="material-icons">arrow_upward</i>
+        <p>Click on the pencil at the top to add more information</p>
+    </mat-card-content>
+    <mat-card-content *ngIf="details && details.length > 0" class="card-content">
+      <p *ngFor="let detail of details">{{detail.summary}}</p>
+    </mat-card-content>
+</mat-card>

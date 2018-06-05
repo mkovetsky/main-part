@@ -1,0 +1,33 @@
+<profile-edition-dialog-header
+  title="Edit Summary"
+  (onArrowBackClicked)="closeDialog()"
+  (onCheckedClicked)="onCheckedClicked(text, videoUrl)">
+</profile-edition-dialog-header>
+<div class="body">
+  <div class="description">
+    <span>Description</span>
+    <textarea name="description"
+              id="descriptionTextArea"
+              cols="30" rows="10"
+              placeholder="This is a description"
+              [(ngModel)]="text">{{text}}</textarea>
+  </div>
+  <div class="video">
+    <span>Summary Video</span>
+    <div class="empty-video-placeholder">
+      <square-button matIcon="mode_edit" [matMenuTriggerFor]="videoActionMenu"></square-button>
+      <span *ngIf="!videoUrl">No Video</span>
+      <span class="bottom-span" *ngIf="!videoUrl">Upload One ;-)</span>
+      <iframe *ngIf="videoUrl"
+              [src]='sanitizer.bypassSecurityTrustResourceUrl(videoUrl)'
+              frameborder="0">
+      </iframe>
+    </div>
+    <input type="text" placeholder="(temporarily) Copy the URL to a video here" [(ngModel)]="videoUrl">
+  </div>
+</div>
+
+<mat-menu #videoActionMenu="matMenu">
+  <button mat-menu-item>Upload Video</button>
+  <button mat-menu-item (click)="videoUrl=''">Remove Video</button>
+</mat-menu>

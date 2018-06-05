@@ -1,0 +1,62 @@
+<mat-toolbar id="system-bar">
+  <div class="left-side">
+      <button @buttons *ngIf="isLoggedIn$ | async"
+              class="bordered-right" mat-button
+              (click)="onNotificationClicked()"
+              [routerLink]="[{outlets: {'sidenav-left' : 'notification-side-menu'} }]">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <mat-icon>search</mat-icon>
+      <mat-input-container class="full-input">
+        <input *ngIf="!(isLoggedIn$ | async)" type="search" matInput placeholder="Looking for something?">
+        <input *ngIf="isLoggedIn$ | async" @buttons type="search" matInput placeholder="Search Job, User, Company">
+      </mat-input-container>
+  </div>
+  <input type="image" matTooltip="Menu" src="assets/logo/logo.png" (click)="openNavigationMenu()" class="logo"/>
+  <div class="right-side">
+      <button *ngIf="(isLoggedIn$ | async) && isCurrentRouteProfile()"
+              mat-button class="bordered-left profile-menu-button"
+              (click)="onProfileClicked()"
+              [routerLink]="[{outlets: {'sidenav-right' : 'profile-side-menu'} }]">
+          <img class="profile-thumbnail" src="../../assets/profiles/annia/annia-thumbnail.jpg"/>
+          {{currentProfile}}
+      </button>
+      <button *ngIf="isLoggedIn$ | async"
+        class="profile-btn" mat-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+  </div>
+</mat-toolbar>
+
+<mat-menu class="below-sys-bar" #appMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>open_with</mat-icon>
+    <span>Rearrange Profile Sections</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">
+      <span>Add a Profile Section</span>
+  </button>
+  <button mat-menu-item>
+      <mat-icon>insert_photo</mat-icon>
+      <span>Add a Media</span>
+  </button>
+</mat-menu>
+
+<mat-menu class="below-sys-bar" #subMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>school</mat-icon>
+    <span>Add School</span>
+  </button>
+  <button mat-menu-item>
+      <mat-icon>work</mat-icon>
+      <span>Add Work Experience</span>
+  </button>
+  <button mat-menu-item>
+      <mat-icon>local_florist</mat-icon>
+      <span>Add Activity</span>
+  </button>
+  <button mat-menu-item>
+      <mat-icon>local_airport</mat-icon>
+      <span>Add Trip</span>
+  </button>
+</mat-menu>

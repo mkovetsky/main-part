@@ -1,0 +1,18 @@
+<div class="dashboard">
+    <div class="header">
+        <h2>Jobs for Me</h2>
+        <div>
+            <span class="bold">User Experience Designer</span> in
+            <span class="bold">Montreal, QC, Canada</span>
+            <button class="square-btn"><i class="material-icons">mode_edit</i></button>
+        </div>
+    </div>
+    <div class="chart">
+        <ngx-charts-bubble-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="data"
+            schemeType="linear">
+        </ngx-charts-bubble-chart>
+    </div>
+</div>
