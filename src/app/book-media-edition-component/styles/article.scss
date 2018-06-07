@@ -1,0 +1,87 @@
+@import "colors";
+
+.article {
+  display: flex;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &__header-title {
+    margin-bottom: 0;
+  }
+
+  &__left {
+    width: 50%;
+    background: $pink;
+    padding: 1rem;
+    color: white;
+    padding-bottom: 60px;
+    position: relative;
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    padding: 1rem;
+    padding-left: 4rem;
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  &__header-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__author {
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    margin-bottom: 60px;
+  }
+
+  &__abstract {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+
+  &__tags {
+    display: flex;
+    padding: 26px 0;
+  }
+
+  &__tag {
+    padding: 5px 14px;
+    background-color: #3131a0;
+    color: white;
+    border-radius: 40px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+
+  &__content {
+    word-wrap: break-word;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__edit-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

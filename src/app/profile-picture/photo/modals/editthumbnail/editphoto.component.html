@@ -1,0 +1,4 @@
+<h1 mat-dialog-title>Edit Thumbnail</h1>
+<div mat-dialog-content>
+    <app-croppie [Image]="imageForm.original_picture" (OnCropped)="croppedImage($event)" id='croppie-demo'></app-croppie>
+</div>

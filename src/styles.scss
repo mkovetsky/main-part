@@ -1,121 +1,123 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'app/book-media-edition-component/book-media-edition-component';
+@import 'app/card-detail/card-detail.component';
 
 /* You can add global styles to this file, and also import other style files */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
-    line-height: 32px;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 button {
-    padding: 0;
-    display: flex;
-    cursor: pointer;
+  padding: 0;
+  display: flex;
+  cursor: pointer;
 }
 
 button {
-   i {
-        margin: auto;
-    }
+  i {
+    margin: auto;
+  }
 }
 
 .rectangle-btn {
-    text-align: center;
-    display:table-cell;
-    vertical-align:middle;
-    width: 8rem;
-    height: 2.5rem;
-    padding: 0.5rem;
-    background-color: #fff;
-    border: solid 0.125rem #333;
-    &:focus {
-        outline: none;
-    }
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+  width: 8rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: solid 0.125rem #333;
+  &:focus {
+    outline: none;
+  }
 }
 
 .square-btn {
-    text-align: center;
-    display:table-cell;
-    vertical-align:middle;
-    padding: 0.3rem;
-    background-color: #fff;
-    border: solid 0.125rem #333;
-    &:focus {
-        outline: none;
-    }
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+  padding: 0.3rem;
+  background-color: #fff;
+  border: solid 0.125rem #333;
+  &:focus {
+    outline: none;
+  }
 }
 
 .circle-button {
-    width: 2.5rem; 
-    height: 2.5rem; 
-    border-radius: 50%;
-    background-color: #fff;
-    border: solid 0.125rem #333;
-    padding: 0.4rem;
-    &:focus {
-        outline: none;
-    }
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 0.125rem #333;
+  padding: 0.4rem;
+  &:focus {
+    outline: none;
+  }
 }
 
 .positive {
-    color: #45B996;
+  color: #45B996;
 }
 
 .negative {
-    color: #FA6C3B;
+  color: #FA6C3B;
 }
 
 .negative-button {
-    @extend .negative;
-    border-color: #FA6C3B; 
-    box-shadow: 0.125rem 0.125rem #FA6C3B;
+  @extend .negative;
+  border-color: #FA6C3B;
+  box-shadow: 0.125rem 0.125rem #FA6C3B;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    line-height: 2rem;
-    font-weight: 300;
-    color:#333;
-    width: 100%;
-    height: 100vh;
-    background-image: url("./assets/background/login.jpg");
-    background-size : 100% auto;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color:#333;
+  width: 100%;
+  height: 100vh;
+  //background-image: url("./assets/background/login.jpg");
+  //background-size : 100% auto;
+  //background-repeat: no-repeat;
+  //overflow: hidden;
 }
 
 .meweall-blue {
-    color: rgb(16, 59, 163);
+  color: rgb(16, 59, 163);
 }
 
 // For the navigation menu. It must remain at this level to be useable
 .navigation-menu-dialog .mat-dialog-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 // For the edition dialogs. It must remain at this level to be useable
 .profile-edition-dialog .mat-dialog-container {
-    .body, .page {
-        padding: 1rem;
-    }
-    padding: 0;
-    margin: 0;
-    width: 45vw;
+  .body, .page {
+    padding: 1rem;
+  }
+  padding: 0;
+  margin: 0;
+  width: 45vw;
 }
 
 /**
@@ -124,17 +126,17 @@ body {
 $border : #ececec;
 
 ul, li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .mat-expansion-panel-body{
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .section{
-    border-bottom: 1px solid $border;
-    border-top : 1px solid $border;
-    padding: 10px 0;
+  border-bottom: 1px solid $border;
+  border-top : 1px solid $border;
+  padding: 10px 0;
 }

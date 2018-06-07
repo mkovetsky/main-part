@@ -1,0 +1,35 @@
+.articles {
+  padding: 50px 0;
+  width: 366px;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__total {
+    margin-left: 10px;
+  }
+}
+.create_first_article{
+  background: green;
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+  height: 30px;
+  color: white;
+
+}
+

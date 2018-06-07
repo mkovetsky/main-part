@@ -2,6 +2,11 @@ import { AppRoutes } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookMediaEditionModule} from './book-media-edition-component/book-media-edition.module';
+import { CardDetailModule } from './card-detail/card-detail.module';
+import { ProfilePictureModule } from './profile-picture/profile-picture.module';
+import { TopRightMenuModule} from './top-right-menu/top-right-menu.module';
+
 
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
@@ -13,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { AlertComponent } from './alert/alert.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
+
 
 // Services
 import { AuthenticationService } from './services/authentication.service';
@@ -99,6 +105,8 @@ import { ProfileSkillComponent } from './profile/_old/profile-skill/profile-skil
 import { ProfileActivityComponent } from './profile/_old/profile-activity/profile-activity.component';
 import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profile-side-menu.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,7 +134,7 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     ProfileJobComponent,
     ProfileSkillComponent,
     ProfileActivityComponent,
-    ProfileSideMenuComponent
+    ProfileSideMenuComponent,
   ],
   imports: [
     FragmentPolyfillModule.forRoot({
@@ -134,6 +142,11 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     }),
     CommonModule,
     FlexLayoutModule,
+    BookMediaEditionModule,
+    CardDetailModule,
+    ProfilePictureModule,
+    TopRightMenuModule,
+
     UiSwitchModule,
     InputsModule,
     DndModule.forRoot(),

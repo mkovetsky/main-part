@@ -1,0 +1,33 @@
+<div class="articles container" *ngIf="articles.length; else noArticles">
+    <div class="articles__header">
+        <h3 class="articles__title">Academic Media</h3>
+        <a [routerLink]="['/blog', 'edit-article']">
+            <mat-icon class="icon--square">add</mat-icon>
+        </a>
+    </div>
+    <book-article-preview [article]="currentArticle" (deleted)="fetchArticles()"></book-article-preview>
+    <footer class="articles__footer">
+        <div class="articles__nav">
+            <mat-icon class="icon--round"
+                      [class.icon--disabled]="!hasPrev"
+                      (click)="getPrevArticle()">
+                keyboard_arrow_left
+            </mat-icon>
+            <mat-icon class="icon--round"
+                      [class.icon--disabled]="!hasNext"
+                      (click)="getNextArticle()">
+                keyboard_arrow_right
+            </mat-icon>
+        </div>
+        <div class="articles__total">
+            {{articles.length}} items total
+        </div>
+    </footer>
+</div>
+
+<ng-template #noArticles>
+    <div class="container">
+        No articles for now.
+        <button class="create_first_article"><a [routerLink]="['/blog', 'edit-article']">Create one.</a></button>
+    </div>
+</ng-template>

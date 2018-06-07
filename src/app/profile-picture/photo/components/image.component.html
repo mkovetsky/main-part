@@ -1,0 +1,36 @@
+<mat-card style="width:300px;">
+    <mat-card-header>
+      <mat-card-title>{{imageForm.firstName}}</mat-card-title>
+      <mat-card-subtitle>{{imageForm.middleName}} {{imageForm.lastName}}</mat-card-subtitle>
+    </mat-card-header>
+    <img style="height:300px;" mat-card-image src="{{imageForm.cropped_picture}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+                <div fxFlex fxLayout="column">
+                    <h3>{{imageForm.firstName}}</h3>
+                    <h4>{{imageForm.middleName}}</h4>
+                    <h4>{{imageForm.lastName}}</h4>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <p>Geographic Information System</p>
+                    <p>teste sdf asdf sdf sdfsdf</p>
+                    <p>sdf sdf sdf sdfsdf</p>
+                </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button [matMenuTriggerFor]="basic"><mat-icon>photo_camera</mat-icon></button>
+        <mat-menu #basic="matMenu">
+                <label for="file-upload" mat-menu-item>
+                        Upload Photo
+                </label>
+            <button (click)="reposition()" mat-menu-item>Reposition Photo</button>
+            <button (click)="editThumbnail()" mat-menu-item>Edit Thumbnail</button>
+            <button (click)="removeThumbnail()" mat-menu-item>Remove Photo</button>
+        </mat-menu>
+    <button (click)="openDialog()" mat-button><mat-icon>mode_edit</mat-icon></button>
+    </mat-card-actions>
+    <div style="display:none;">
+        <input id="file-upload" type="file" (change)="changeListener($event)">
+    </div>
+  </mat-card>

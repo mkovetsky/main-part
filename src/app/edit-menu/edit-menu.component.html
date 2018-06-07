@@ -1,0 +1,17 @@
+<button mat-button [matMenuTriggerFor]="edit">
+  <mat-icon>create</mat-icon></button>
+
+<mat-menu #edit="matMenu" >
+  <button mat-menu-item><a routerLink="/rearrange" routerLinkActive="active">
+    <mat-icon>swap_vert</mat-icon>Rearrange Profile Sections</a></button>
+  <button mat-menu-item [matMenuTriggerFor]="section">Add a Profile Section</button>
+  <button mat-menu-item><mat-icon>insert_photo</mat-icon>Add media</button>
+</mat-menu>
+
+<mat-menu #section="matMenu">
+  <button mat-menu-item><mat-icon>school</mat-icon>Add School</button>
+  <button mat-menu-item><mat-icon>work</mat-icon>Add Work Experience</button>
+  <button mat-menu-item><mat-icon>group</mat-icon>Add Activity</button>
+  <button mat-menu-item><mat-icon>flight</mat-icon>Add Trip</button>
+</mat-menu>
+

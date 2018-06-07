@@ -1,0 +1,38 @@
+<section class="page">
+    <div class="top" fxLayout fxLayoutAlign='space-between center'>
+        <a class="nav_btn" (click)='onClose(false)'><mat-icon>arrow_back</mat-icon></a>
+        <span> Edit Work.Exp Highlights</span>
+        <a class="save_btn" (click)='onClose(true)'><mat-icon>check</mat-icon></a>
+    </div>
+    <div class="section">
+        <div class="header">
+            <button class="btn-add" mat-button (click)='add()'>
+                <mat-icon>add</mat-icon>
+            </button>
+            <span class="count">{{courses.length}} items</span>
+        </div>
+    </div>
+
+    <div>
+        <ul dnd-sortable-container [sortableData]="courses">
+            <li *ngFor="let course of courses; let i = index">
+
+                <div class="course" fxLayout fxLayoutAlign='end stretch' fxLayoutGap='5px' dnd-sortable [sortableIndex]="i">
+                    <button mat-button dnd-sortable-handle><mat-icon>open_with</mat-icon></button>
+                    <button mat-button (click)="delete(i)"><mat-icon>delete_forever</mat-icon></button>
+                </div>
+
+                <div class="course-content" fxLayout='column' fxLayoutGap='10px'>
+                    <div fxFill fxLayout='column' fxLayoutAlign="start stretch">
+                        <div class="static">Description</div>
+                        <textarea class="value" [(ngModel)]='course["description"]' placeholder="Describe">
+                        </textarea>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+<!--
+ -->

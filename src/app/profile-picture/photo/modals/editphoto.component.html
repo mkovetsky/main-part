@@ -1,0 +1,59 @@
+<h1 mat-dialog-title>Edit Information</h1>
+<div mat-dialog-content>
+  
+        <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+            <div class="card-form-input" fxflex>
+                <mat-input-container>
+                <input matInput placeholder="First name" type="text"
+                        [(ngModel)]="imageForm.firstName" name="firstName" #firstName="ngModel" required>
+                </mat-input-container>
+                
+            </div>
+            <div class="card-form-input" fxflex>
+                <mat-input-container>
+                <input matInput placeholder="Middle name" type="text"
+                        [(ngModel)]="imageForm.middleName" name="middleName" #lastName="ngModel" required>
+                </mat-input-container>
+               
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+            <div class="card-form-input" fxflex>
+                <mat-input-container>
+                <input matInput placeholder="Last name" type="text"
+                        [(ngModel)]="imageForm.lastName" name="lastName" #firstName="ngModel" required>
+                </mat-input-container>
+                
+            </div>
+            <div class="card-form-input" fxflex>
+                <mat-input-container>
+                <input matInput placeholder="Date of Birth" type="text"
+                        [(ngModel)]="imageForm.dob" name="dob" #lastName="ngModel" required>
+                </mat-input-container>
+                
+            </div>
+        </div>
+        <mat-card fxFlex>
+      
+                <img mat-card-image src="{{imageForm.cropped_picture}}">
+                <mat-card-actions>
+                     <button mat-button [matMenuTriggerFor]="basic"><mat-icon>mode_edit</mat-icon></button>
+                     <mat-menu #basic="matMenu">
+                            <label for="file-upload" mat-menu-item>
+                                    Upload Photo
+                            </label>
+                            <button (click)="removeThumbnail()" mat-menu-item>Remove Photo</button>
+                     </mat-menu>
+                </mat-card-actions>
+                <div style="display:none;">
+                        <input id="file-upload" type="file" (change)="changeListener($event)">
+                </div>
+        </mat-card>  
+        
+</div>
+<div mat-dialog-actions>
+  
+    <button (click)="submit()" mat-raised-button color="primary">Submit</button>
+</div>
+  
+  

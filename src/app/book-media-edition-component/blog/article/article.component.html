@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="article" *ngIf="article; else articleNotFound">
+        <section class="article__left"
+                 [class.article__left--full]="descriptionExpanded"
+                 [style.background-color]="article.color">
+            <header class="article__header">
+                <a [routerLink]="['/blog', 'articles']">
+                    <mat-icon class="icon--round">keyboard_backspace</mat-icon>
+                </a>
+                <div class="article__header-controls">
+                    <div class="icon__wrapper">
+                        <mat-icon class="icon--square">edit</mat-icon>
+                        <div class="icon__menu">
+                            <a [routerLink]="['/blog', 'edit-article']"
+                               [queryParams]="{articleId: article.id}"
+                               class="icon__option">
+                                Edit
+                            </a>
+                            <span (click)="removeArticle()" class="icon__option">
+                                Remove
+                            </span>
+                        </div>
+                    </div>
+                    <img class="avatar avatar--small" src="../../../../assets/book-media/lannister.jpg">
+                </div>
+            </header>
+            <div class="article__content">
+                <h1 class="article__title">{{article.title}}</h1>
+                <div class="article__tags" *ngIf="tags.length">
+                    <div class="article__tag" *ngFor="let tag of tags">{{tag}}</div>
+                </div>
+                <div class="article__author"> by {{article.author}}</div>
+                <div class="article__date">{{article.month}} {{article.year}}</div>
+                <p class="article__abstract">
+                    {{article.abstract | truncate: maxArticleDescriptionLength: descriptionExpanded}}
+                </p>
+                <button class="button"
+                        (click)="expandDescription()"
+                        *ngIf="!descriptionExpanded && article?.abstract?.length > maxArticleDescriptionLength">
+                    Full Texts
+                </button>
+            </div>
+        </section>
+        <section class="article__right" *ngIf="!descriptionExpanded">
+            <header class="article__header">
+                <div></div>
+                <mat-icon class="icon--round">launch</mat-icon>
+            </header>
+            <div class="article__content" [innerHtml]="description"></div>
+        </section>
+
+    </div>
+
+    <ng-template #articleNotFound>
+        Article Not Found
+        <a [routerLink]="'/'">Link home</a>
+    </ng-template>
+</div>

@@ -1,0 +1,20 @@
+<mat-menu  #manageaccount="matMenu" yPosition="below" [overlapTrigger]="false">
+  <button *ngFor='let page of pages' mat-menu-item [routerLink]="[page.link]" (click)='current = page'>{{page.name}}</button>
+</mat-menu>
+
+<section class="section" fxLayout = 'row' fxLayoutAlign='end center'>
+    <img height="50px" src="../../assets/card-details/human.jpg">
+    <label for='#account'>
+      {{current.name}}
+      <button #account mat-icon-button [matMenuTriggerFor]= "manageaccount">
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </label>
+    <div class="edit" fxLayout fxLayoutAlign='center center'>
+      <button mat-icon-button (click)='edit()'>
+        <mat-icon>create</mat-icon>
+      </button>
+    </div>
+</section>
+
+<router-outlet></router-outlet>

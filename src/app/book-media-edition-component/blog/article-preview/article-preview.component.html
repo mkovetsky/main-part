@@ -1,0 +1,32 @@
+<mat-card class="article-preview">
+    <img mat-card-image src="../../../../assets/book-media/preview.jpg">
+    <h4 mat-card-content>{{article.title}}</h4>
+    <div mat-card-subtitle>
+        <p>{{article.author}}</p>
+        <p>{{article.month}} {{article.year}}</p>
+    </div>
+    <footer class="article-preview__footer" mat-card-content>
+        <div class="article-preview__actions">
+            <a [routerLink]="['/blog', 'article', article.id]">
+                <mat-icon class="icon--round">visibility</mat-icon>
+            </a>
+            <mat-icon class="icon--round">launch</mat-icon>
+        </div>
+        <div class="article-preview__actions">
+            <div class="icon__wrapper">
+                <mat-icon class="icon--square">edit</mat-icon>
+                <div class="icon__menu">
+                    <a [routerLink]="['/blog', 'edit-article']"
+                       [queryParams]="{articleId: article.id}"
+                       class="icon__option">
+                        Edit
+                    </a>
+                    <span (click)="removeArticle()" class="icon__option">
+                        Remove
+                    </span>
+                </div>
+            </div>
+            <img class="avatar avatar--small" src="../../../../assets/book-media//lannister.jpg">
+        </div>
+    </footer>
+</mat-card>

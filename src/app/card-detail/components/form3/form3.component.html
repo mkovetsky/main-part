@@ -1,0 +1,64 @@
+<section class="page">
+    <div class="top" fxLayout fxLayoutAlign='space-between center'>
+        <a class="nav_btn" (click)='onClose(false)'><mat-icon>arrow_back</mat-icon></a>
+        <span> Edit Acitivity Details</span>
+        <a class="save_btn" (click)='onClose(true)'><mat-icon>check</mat-icon></a>
+    </div>
+    <div class="course-content">
+        <div fxLayout='row wrap' fxLayoutGap='10px'>
+            <div fxFlex='48' fxLayout='column' fxLayoutAlign="start stretch">
+                <div class="static">Acitivity Name</div>
+                <input class="value" placeholder="Soccer" type="text" name='activity' [(ngModel)]='data.activity'>
+            </div>
+            <div fxFlex='48' fxLayout='column' fxLayoutAlign="start stretch">
+                <div class="static">Ongoing</div>
+                <ui-switch labelOn="Yes" labelOff="No" [(ngModel)]='data.ongoing'></ui-switch>
+            </div>
+            <div fxFlex='48' fxLayout='column' fxLayoutAlign="start stretch">
+                <div class="static">From</div>
+                <select class="value" [(ngModel)]='data.fromYear'>
+                    <option *ngFor="let option of [2000, 2001, 2003]">{{option}}</option>
+                </select>
+            </div>
+            <div fxFlex='48' fxLayout='column' fxLayoutAlign="start stretch">
+                <div class="static">To</div>
+                <select class="value" [(ngModel)]='data.toYear'>
+                    <option *ngFor="let option of [2000, 2001, 2003]">{{option}}</option>
+                </select>
+            </div>
+            <div fxFlex='100' fxLayout='column' fxLayoutAlign="start stretch">
+                <div class="static">Personal Significance to You</div>
+                <textarea class="value" placeholder="Describe" [(ngModel)]='data.description'></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="header">
+            <div class="static">Highlight</div>
+            <button class="btn-add" mat-button (click)='add()'>
+                <mat-icon>add</mat-icon>
+            </button>
+            <span class="count">{{data.highlights.length}} items</span>
+        </div>
+    </div>
+
+    <div>
+        <ul dnd-sortable-container [sortableData]="courses">
+            <li *ngFor="let highlight of data.highlights; let i = index; TrackBy:trackByFn">
+                <div class="course" fxLayout fxLayoutAlign='end stretch' fxLayoutGap='5px' dnd-sortable [sortableIndex]="i">
+                    <button mat-button dnd-sortable-handle><mat-icon>open_with</mat-icon></button>
+                    <button mat-button (click)="delete(i)"><mat-icon>delete_forever</mat-icon></button>
+                </div>
+                <div class="course-content" fxLayout='column' fxLayoutGap='10px'>
+                    <div fxFill fxLayout='column' fxLayoutAlign="start stretch">
+                        <div class="static">Description</div>
+                        <textarea class="value" name='highlight' [(ngModel)]='data.highlights[i]' placeholder="Describe">
+                        </textarea>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
