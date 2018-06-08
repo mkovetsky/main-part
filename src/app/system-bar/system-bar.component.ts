@@ -6,6 +6,7 @@ import { EventBrokerService, IEventListener } from '../services/event-broker.ser
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { NavigationMenuComponent } from '../navigation-menu/navigation-menu.component';
+import { ProfileCategory, ProfileService } from '../introduction-menu/services/profile.service';
 
 @Component({
   selector: 'system-bar',
@@ -36,12 +37,27 @@ export class SystemBarComponent implements OnInit, OnDestroy {
   isLoggedIn$: Observable<boolean>;
   eventListener: IEventListener;
 
+  menuShown = false;
+  editShown = false;
+  profileSections = [];
+  editMenu: ProfileCategory[] = [{
+    categoryTitle: 'Rearrange Profile Sections',
+    icon: 'school',
+    link: '/rearrange',
+    records: []
+  }, {
+    categoryTitle: 'Add media',
+    icon: 'media',
+    records: []
+  }];
+
   constructor(private dialogService: MatDialog,
+              private profileService: ProfileService,
               private authenticationService: AuthenticationService,
               private eventBroker: EventBrokerService, private router: Router) {
-      this.eventListener = eventBroker.listen<string>('profile-section-changed', (value: string) => {
-           this.currentProfile = value;
-      });
+      // this.eventListener = eventBroker.listen<string>('profile-section-changed', (value: string) => {
+      //      this.currentProfile = value;
+      // });
   }
 
   public ngOnDestroy() {
@@ -49,7 +65,8 @@ export class SystemBarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.isLoggedIn$ = this.authenticationService.isLoggedIn;
+    this.profileSections = this.profileService.profileSections;
+    // this.isLoggedIn$ = this.authenticationService.isLoggedIn;
   }
 
   onLogout() {

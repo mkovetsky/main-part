@@ -25,6 +25,14 @@
         class="profile-btn" mat-button [matMenuTriggerFor]="appMenu">
         <mat-icon>mode_edit</mat-icon>
       </button>
+    <button class="header_button header_introduction" (click)="menuShown = !menuShown; editShown = false">Introduction
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <app-menu *ngIf="menuShown" class="header_menu" [sections]="profileSections"></app-menu>
+    <button class="header_button header_edit" (click)="editShown = !editShown; menuShown = false">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <app-menu style="width: 320px" *ngIf="editShown" class="header_menu" [sections]="editMenu"></app-menu>
   </div>
 </mat-toolbar>
 

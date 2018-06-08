@@ -183,7 +183,6 @@ import {
     CardDetailModule,
     ProfilePictureModule,
     IntroductionMenuModule,
-
     UiSwitchModule,
     InputsModule,
     DndModule.forRoot(),

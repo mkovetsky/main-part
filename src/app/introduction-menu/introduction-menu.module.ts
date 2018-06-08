@@ -7,25 +7,20 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { DraggableModule } from './draggable/draggable.module';
-import { IntroductionMenuComponent } from './introduction-menu.component';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { RearrangeComponent } from './rearrange/rearrange.component';
-import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfileService } from './services/profile.service';
 
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
   {path: 'rearrange', component: RearrangeComponent}
 ];
 
 @NgModule({
   declarations: [
-    IntroductionMenuComponent,
     EditMenuComponent,
     RearrangeComponent,
-    HomeComponent,
     MenuComponent
   ],
 
@@ -33,7 +28,6 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatMenuModule,
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
@@ -45,10 +39,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {enableTracing: true}
     )
   ],
+  exports: [MenuComponent],
   providers: [ProfileService],
-  bootstrap: [IntroductionMenuComponent]
 })
 export class IntroductionMenuModule {
 }
-
-platformBrowserDynamic().bootstrapModule(IntroductionMenuModule);

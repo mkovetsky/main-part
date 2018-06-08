@@ -1,65 +1,102 @@
 mat-toolbar {
-    padding: 0;
-    position: fixed;
-    height: 4rem;
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
+  padding: 0;
+  position: fixed;
+  height: 4rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
 
-    ::ng-deep .mat-input-underline {
-        display: none;
-    }
+  ::ng-deep .mat-input-underline {
+    display: none;
+  }
 }
 
 mat-icon {
-    align-self: center;
+  align-self: center;
 }
 
 .left-side {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .right-side {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
 }
 
 .logo {
-    flex: 0 0 auto;
-    border-radius: 2em / 8em;
-    // Make sure it is on top of anything
-    z-index: 15;
-    &:focus {
-        outline: none;
-    }
+  flex: 0 0 auto;
+  border-radius: 2em / 8em;
+  // Make sure it is on top of anything
+  z-index: 15;
+  &:focus {
+    outline: none;
+  }
 }
 
 .full-input {
-    width: 100%;
+  width: 100%;
 }
 
 .centered-icon {
-    margin: 0.5rem;
+  margin: 0.5rem;
 }
 
 .profile-thumbnail {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .profile-menu-button {
-    padding: 0.3rem;
+  padding: 0.3rem;
 }
 
 .main-menu-btn {
-    border: none;
+  border: none;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  align-items: center;
+  border: 1px #eee solid;
+  width: 100%;
+  position: relative;
+}
+
+.header_menu {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.header_button {
+  height: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px #eee solid;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background: #eee;
+  }
+}
+
+.header_introduction {
+  padding: 0 6px 0 40px
+}
+
+.header_edit {
+  padding: 0 20px
 }

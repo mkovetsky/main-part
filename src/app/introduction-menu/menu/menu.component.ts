@@ -8,7 +8,7 @@ import { ProfileCategory } from '../services/profile.service';
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent implements OnInit {
-  @Input() sections: ProfileCategory[];
+  @Input() sections: ProfileCategory[] = [];
   @Input() sortable = false;
 
   constructor() {
