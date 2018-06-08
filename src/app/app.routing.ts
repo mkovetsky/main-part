@@ -14,7 +14,7 @@ import { ProfileActivityComponent } from './profile/_old/profile-activity/profil
 import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profile-side-menu.component';
 import { ProfileIntroductionComponent } from './profile/_old/profile-introduction/profile-introduction.component';
 import { NotificationSideMenuComponent } from './notification-side-menu/notification-side-menu.component';
-import { RearrangeComponent } from './top-right-menu/rearrange/rearrange.component';
+import { RearrangeComponent } from './introduction-menu/rearrange/rearrange.component';
 
 export const AppRoutes: Routes = [
     { path: '', component: DashboardComponent, canActivate: [AuthGuard] },

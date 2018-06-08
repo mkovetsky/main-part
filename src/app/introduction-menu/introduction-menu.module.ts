@@ -7,7 +7,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { DraggableModule } from './draggable/draggable.module';
-import { TopRightMenuComponent } from './top-right-menu.component';
+import { IntroductionMenuComponent } from './introduction-menu.component';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { RearrangeComponent } from './rearrange/rearrange.component';
 import { HomeComponent } from './home/home.component';
@@ -15,9 +15,14 @@ import { MenuComponent } from './menu/menu.component';
 import { ProfileService } from './services/profile.service';
 
 
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'rearrange', component: RearrangeComponent}
+];
+
 @NgModule({
   declarations: [
-    TopRightMenuComponent,
+    IntroductionMenuComponent,
     EditMenuComponent,
     RearrangeComponent,
     HomeComponent,
@@ -37,12 +42,13 @@ import { ProfileService } from './services/profile.service';
     MatSelectModule,
     DraggableModule,
     MatCheckboxModule,
-
+    RouterModule.forRoot(appRoutes, {enableTracing: true}
+    )
   ],
   providers: [ProfileService],
-  bootstrap: [TopRightMenuComponent]
+  bootstrap: [IntroductionMenuComponent]
 })
-export class TopRightMenuModule {
+export class IntroductionMenuModule {
 }
 
-platformBrowserDynamic().bootstrapModule(TopRightMenuModule);
+platformBrowserDynamic().bootstrapModule(IntroductionMenuModule);

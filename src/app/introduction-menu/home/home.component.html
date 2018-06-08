@@ -1,4 +1,4 @@
-<header class="header">
+<div class="header">
   <button class="header_button header_introduction" (click)="menuShown = !menuShown; editShown = false">Introduction
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
@@ -7,4 +7,4 @@
     <mat-icon>edit</mat-icon>
   </button>
   <app-menu style="width: 320px" *ngIf="editShown" class="header_menu" [sections]="editMenu"></app-menu>
-</header>
+</div>

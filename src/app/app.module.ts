@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookMediaEditionModule} from './book-media-edition-component/book-media-edition.module';
 import { CardDetailModule } from './card-detail/card-detail.module';
 import { ProfilePictureModule } from './profile-picture/profile-picture.module';
-import { TopRightMenuModule} from './top-right-menu/top-right-menu.module';
+import { IntroductionMenuModule } from './introduction-menu/introduction-menu.module';
 
 
 import { RouterModule } from '@angular/router';
@@ -145,7 +145,7 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     BookMediaEditionModule,
     CardDetailModule,
     ProfilePictureModule,
-    TopRightMenuModule,
+    IntroductionMenuModule,
 
     UiSwitchModule,
     InputsModule,
