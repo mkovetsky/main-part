@@ -52,7 +52,7 @@ export class ArticleComponent implements OnInit {
     }
 
     private prepareTags(tags: string): string[] {
-        if (tags.length === 0) {
+        if (!tags || tags.length === 0) {
             return [];
         }
         return tags.split(',');
