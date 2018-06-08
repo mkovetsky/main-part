@@ -1,5 +1,5 @@
 <div appSortableList (sort)="sort($event)" class="menu">
-  <div *ngFor="let section of sections; let i = index;" class="section" appSortable>
+  <div *ngFor="let section of sections; let i = index;" class="menu__section" appSortable>
     <button (click)="section['visible'] = !section['visible']" class="section_button">
       <div class="section_title">
         <mat-icon [class.section_cevron--rotated]="section['visible']"
