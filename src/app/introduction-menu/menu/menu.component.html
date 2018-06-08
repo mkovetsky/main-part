@@ -8,7 +8,7 @@
         </mat-icon>
         <mat-icon>{{section.icon}}</mat-icon>
         <span class="section_title-text">
-          <a [routerLink]="section.link" *ngIf="section.link">{{section.categoryTitle}}</a>
+          <a [routerLink]="section.link" class="menu__link" *ngIf="section.link">{{section.categoryTitle}}</a>
           <span *ngIf="!section.link">{{section.categoryTitle}}</span>
         </span>
       </div>
