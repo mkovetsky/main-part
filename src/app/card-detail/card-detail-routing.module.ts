@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import {
-    TripDetailsComponent,
-    ActivityDetailsComponent,
-    SkillsComponent,
-    WorkExperienceComponent,
-    SchoolDetailsHighlightsComponent,
-    TravellingInfoComponent
+  ActivityDetailsComponent,
+  SchoolDetailsHighlightsComponent,
+  SkillsComponent,
+  TravellingInfoComponent,
+  TripDetailsComponent,
+  WorkExperienceComponent
 } from './pages';
+import { CardDetailComponent } from './card-detail.component';
 
 const routes: Routes = [
   {
-    path: 'card-detail', children: [
-      {path: 'card-detail', redirectTo: 'trip-detail', pathMatch: 'prefix'},
-      {path: 'trip-detail', component: TripDetailsComponent},
+    path: 'card-details', component: CardDetailComponent, children: [
+      {path: 'trip-details', component: TripDetailsComponent},
       {path: 'activity-details', component: ActivityDetailsComponent},
       {path: 'skills', component: SkillsComponent},
       {path: 'school-details-highlights', component: SchoolDetailsHighlightsComponent},
@@ -25,8 +25,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class CardDetailRoutingModule {
 }

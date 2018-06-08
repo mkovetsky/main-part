@@ -20,13 +20,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { IntroductionEditionComponent} from './profile/_old/profile-introduction/introduction-edition/introduction-edition.component';
 import { ActivityEditionComponent } from './profile/_old/profile-activity/activity-edition/activity-edition.component';
-import {TripDetailsComponent} from './profile/pages';
-import {ActivityDetailsComponent} from './profile/pages';
-import {SkillsComponent} from './profile/pages';
-import {WorkExperienceComponent} from './profile/pages';
-import {SchoolDetailsHighlightsComponent} from './profile/pages';
-import {TravellingInfoComponent} from './profile/pages';
-
 
 // Services
 import { AuthenticationService } from './services/authentication.service';
@@ -112,17 +105,6 @@ import { ProfileJobComponent } from './profile/_old/profile-job/profile-job.comp
 import { ProfileSkillComponent } from './profile/_old/profile-skill/profile-skill.component';
 import { ProfileActivityComponent } from './profile/_old/profile-activity/profile-activity.component';
 import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profile-side-menu.component';
-import {
-  Form10Component, Form11Component,
-  Form1Component,
-  Form2Component,
-  Form3Component,
-  Form4Component,
-  Form5Component,
-  Form6Component,
-  Form7Component, Form8Component, Form9Component
-} from './profile/components';
-
 
 
 @NgModule({
@@ -155,23 +137,6 @@ import {
     ProfileSideMenuComponent,
     IntroductionEditionComponent,
     ActivityEditionComponent,
-    TripDetailsComponent,
-    ActivityDetailsComponent,
-    SkillsComponent,
-    WorkExperienceComponent,
-    SchoolDetailsHighlightsComponent,
-    TravellingInfoComponent,
-    Form1Component,
-    Form2Component,
-    Form3Component,
-    Form4Component,
-    Form5Component,
-    Form6Component,
-    Form7Component,
-    Form8Component,
-    Form9Component,
-    Form10Component,
-    Form11Component,
   ],
   imports: [
     FragmentPolyfillModule.forRoot({
