@@ -9,7 +9,7 @@ import { TemplatePortal } from '@angular/cdk/portal';
 })
 export class DraggableHelperDirective implements OnInit, OnDestroy {
   private overlayRef: OverlayRef;
-  private positionStrategy = new GlobalPositionStrategy();
+  private positionStrategy = new GlobalPositionStrategy(document);
   private startPosition?: { x: number; y: number };
 
   constructor(private draggable: DraggableDirective,

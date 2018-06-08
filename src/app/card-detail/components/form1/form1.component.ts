@@ -10,7 +10,7 @@ export class Form1Component implements OnInit {
 
   courses = [];
 
-  constructor(public dialog : MatDialogRef<Form1Component>) { }
+  constructor(public dialog: MatDialogRef<Form1Component>) { }
 
   ngOnInit() {
   }
