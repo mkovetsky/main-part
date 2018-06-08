@@ -10,36 +10,36 @@ import { DataService } from './services';
 export class CardDetailComponent {
   title = 'app';
 
-  current : any;
+  current: any;
 
   pages = [
     {
-      name : 'Trips',
-      link : 'trip-details'
+      name: 'Trips',
+      link: 'trip-details'
     },
     {
-      name : 'Activities',
-      link : 'activity-details'
+      name: 'Activities',
+      link: 'activity-details'
     },
     {
-      name : 'Skills',
-      link : 'skills'
+      name: 'Skills',
+      link: 'skills'
     },
     {
-      name : 'Work Experiences',
-      link : 'work-experience'
+      name: 'Work Experiences',
+      link: 'work-experience'
     },
     {
-      name : 'Academic',
-      link : 'school-details-highlights'
+      name: 'Academic',
+      link: 'school-details-highlights'
     },
     {
-      name : 'Travelling',
-      link : 'travelling-info'
+      name: 'Travelling',
+      link: 'travelling-info'
     }
   ];
 
-  constructor(private dialog : MatDialog, private dataService : DataService){
+  constructor(private dialog: MatDialog, private dataService: DataService) {
     this.current = this.pages[0];
   }
 }
