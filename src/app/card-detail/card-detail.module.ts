@@ -11,16 +11,7 @@ import { DataService } from './services';
 
 import { APP_COMPONENTS } from './components';
 import { APP_PAGES } from './pages';
-import {
-  Form10Component, Form11Component,
-  Form1Component,
-  Form2Component,
-  Form3Component,
-  Form4Component,
-  Form5Component,
-  Form6Component,
-  Form7Component, Form8Component, Form9Component
-} from './components/';
+
 
 
 @NgModule({
@@ -35,17 +26,7 @@ import {
     BrowserAnimationsModule,
     SharedModule,
     CardDetailRoutingModule,
-    Form1Component,
-    Form2Component,
-    Form3Component,
-    Form4Component,
-    Form5Component,
-    Form6Component,
-    Form7Component,
-    Form8Component,
-    Form9Component,
-    Form10Component,
-    Form11Component,
+
   ],
   providers: [ DataService ],
   entryComponents : APP_COMPONENTS,

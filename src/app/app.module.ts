@@ -145,6 +145,12 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     ProfileSideMenuComponent,
     IntroductionEditionComponent,
     ActivityEditionComponent,
+    TripDetailsComponent,
+    ActivityDetailsComponent,
+    SkillsComponent,
+    WorkExperienceComponent,
+    SchoolDetailsHighlightsComponent,
+    TravellingInfoComponent,
   ],
   imports: [
     FragmentPolyfillModule.forRoot({
