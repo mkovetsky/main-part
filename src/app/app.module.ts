@@ -112,6 +112,16 @@ import { ProfileJobComponent } from './profile/_old/profile-job/profile-job.comp
 import { ProfileSkillComponent } from './profile/_old/profile-skill/profile-skill.component';
 import { ProfileActivityComponent } from './profile/_old/profile-activity/profile-activity.component';
 import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profile-side-menu.component';
+import {
+  Form10Component, Form11Component,
+  Form1Component,
+  Form2Component,
+  Form3Component,
+  Form4Component,
+  Form5Component,
+  Form6Component,
+  Form7Component, Form8Component, Form9Component
+} from './profile/components';
 
 
 
@@ -151,6 +161,17 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     WorkExperienceComponent,
     SchoolDetailsHighlightsComponent,
     TravellingInfoComponent,
+    Form1Component,
+    Form2Component,
+    Form3Component,
+    Form4Component,
+    Form5Component,
+    Form6Component,
+    Form7Component,
+    Form8Component,
+    Form9Component,
+    Form10Component,
+    Form11Component,
   ],
   imports: [
     FragmentPolyfillModule.forRoot({
