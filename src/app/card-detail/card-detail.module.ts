@@ -12,8 +12,7 @@ import { DataService } from './services';
 import { APP_COMPONENTS } from './components';
 import { APP_PAGES } from './pages';
 import {
-  Form10Component, Form11Component,
-  Form1Component,
+  Form10Component, Form11Component, Form1Component,
   Form2Component,
   Form3Component,
   Form4Component,
