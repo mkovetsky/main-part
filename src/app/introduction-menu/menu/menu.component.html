@@ -6,6 +6,7 @@
                   [style.visibility]="section.records.length ? 'visible' : 'hidden'">
           chevron_right
         </mat-icon>
+
         <mat-icon>{{section.icon}}</mat-icon>
         <span class="section_title-text">
           <a [routerLink]="section.link" class="menu__link" *ngIf="section.link">{{section.categoryTitle}}</a>

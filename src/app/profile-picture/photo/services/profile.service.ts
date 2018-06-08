@@ -31,6 +31,6 @@ export class ProfileService {
   }
 
   getDefaultThumbnail() {
-     return '/mediasoftangular101/assets/images/default.jpg'; // 'mediasoftangular101
+     return '../../../../assets/profile-picture/default.jpg'; // 'mediasoftangular101
   }
 }
