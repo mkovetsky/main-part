@@ -1,4 +1,4 @@
-<div appSortableList (sort)="sort($event)" class="menu">
+<div (clickOutside)="close$.emit()" appSortableList (sort)="sort($event)" class="menu">
   <div *ngFor="let section of sections; let i = index;" class="menu__section" appSortable>
     <button (click)="section['visible'] = !section['visible']" class="section_button">
       <div class="section_title">

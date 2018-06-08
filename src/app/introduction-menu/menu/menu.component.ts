@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SortEvent } from '../draggable/sortable-list.directive';
 import { ProfileCategory } from '../services/profile.service';
 
@@ -10,6 +10,7 @@ import { ProfileCategory } from '../services/profile.service';
 export class MenuComponent implements OnInit {
   @Input() sections: ProfileCategory[] = [];
   @Input() sortable = false;
+  @Output() close$ = new EventEmitter<void>();
 
   constructor() {
   }

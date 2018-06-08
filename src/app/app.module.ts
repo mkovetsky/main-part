@@ -105,6 +105,7 @@ import { ProfileJobComponent } from './profile/_old/profile-job/profile-job.comp
 import { ProfileSkillComponent } from './profile/_old/profile-skill/profile-skill.component';
 import { ProfileActivityComponent } from './profile/_old/profile-activity/profile-activity.component';
 import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profile-side-menu.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 
 @NgModule({

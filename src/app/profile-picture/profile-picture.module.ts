@@ -55,7 +55,7 @@ import {EditArticleComponent} from '../book-media-edition-component/blog/edit-ar
       RouterModule.forRoot([
       {
         path: 'profile', children: [
-          {path: 'profile', redirectTo: 'picture', pathMatch: 'prefix'},
+          {path: '', redirectTo: 'picture', pathMatch: 'prefix'},
           {path: 'picture', component: ProfilePictureComponent},
           ]
         },
