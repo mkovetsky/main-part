@@ -18,6 +18,14 @@ import { LoginComponent } from './login/login.component';
 import { AlertComponent } from './alert/alert.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
+import { IntroductionEditionComponent} from './profile/_old/profile-introduction/introduction-edition/introduction-edition.component';
+import { ActivityEditionComponent } from './profile/_old/profile-activity/activity-edition/activity-edition.component';
+import {TripDetailsComponent} from './profile/pages';
+import {ActivityDetailsComponent} from './profile/pages';
+import {SkillsComponent} from './profile/pages';
+import {WorkExperienceComponent} from './profile/pages';
+import {SchoolDetailsHighlightsComponent} from './profile/pages';
+import {TravellingInfoComponent} from './profile/pages';
 
 
 // Services
@@ -135,6 +143,8 @@ import { ProfileSideMenuComponent } from './profile/_old/profile-side-menu/profi
     ProfileSkillComponent,
     ProfileActivityComponent,
     ProfileSideMenuComponent,
+    IntroductionEditionComponent,
+    ActivityEditionComponent,
   ],
   imports: [
     FragmentPolyfillModule.forRoot({
