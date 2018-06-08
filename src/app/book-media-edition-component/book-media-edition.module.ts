@@ -25,6 +25,7 @@ import { FrontendStorageService } from './shared/services/frontend-storage.servi
                     {path: 'article/:articleId', component: ArticleComponent},
                     {path: 'edit-article', component: EditArticleComponent}
                 ]
+
             },
         ]),
         BlogModule
