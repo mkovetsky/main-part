@@ -20,7 +20,7 @@ import {
   Form5Component,
   Form6Component,
   Form7Component, Form8Component, Form9Component
-} from './components/';
+} from  './components/';
 
 
 @NgModule({
