@@ -48,6 +48,7 @@ export class SystemBarComponent implements OnInit, OnDestroy {
   }, {
     categoryTitle: 'Add media',
     icon: 'media',
+    link: '/blog/articles',
     records: []
   }];
 
