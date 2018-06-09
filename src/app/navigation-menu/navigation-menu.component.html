@@ -16,10 +16,10 @@
   <div class="body">
     <div class="profile">
       <input type="image" src="../../assets/profiles/annia/annia-thumbnail.jpg"
-            alt=":)" [routerLink]="['/profile']" (click)="closeDialog()">
+            alt=":)" [routerLink]="['/edit-picture']" (click)="closeDialog()">
       <div class="name-with-link">
         <h3>Firstname Lastname</h3>
-        <a [routerLink]="['/card-details']" (click)="closeDialog()">
+        <a [routerLink]="['/profile']" (click)="closeDialog()">
           <mat-icon>person</mat-icon>
           <span>Go to My Profile</span>
         </a>
